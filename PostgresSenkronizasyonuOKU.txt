@@ -1,0 +1,14 @@
+Veritabanı temiz değil ise başlatmadan önce bu komut ile temizleyip yetkileri verebilirsiniz;
+Veri tabanını temiz ve yetki ver(public schema'ya):
+Kod1:
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
+GRANT ALL ON SCHEMA public TO postgres;
+COMMENT ON SCHEMA public IS 'standard public schema';
+
+
+Veritabanı güncellenmesi durumunda yapılması gerekenler;
+1. PostgreSQL'da yukarıdaki(Kod1) sorguyu yapın(veri tabanı temizleme ve yetkilendirme).
+2. Komut satırında Frontend directory'e gidin.
+3. 'npm run build-migration' komutunu çalıştırın.
+4. Uygulamayı başlatın.

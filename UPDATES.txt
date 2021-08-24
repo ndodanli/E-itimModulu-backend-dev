@@ -1,0 +1,27 @@
+***08.02.2021 güncellemeler
+*Backend*
+-EF Core 5.0.0'a geçiş yapıldı
+-Entity constraintleri fluent api ile yapıldı
+-Refresh token her kullanıcı için teke indirildi(one-to-one), buna göre giriş yapısı iyileştirildi
+-Lesson code eklendi(kontroller case insensitive)
+-Öğrenci girişi eklendi
+-School code eklendi, code ile authenticate sağlandı
+-Schooldan adres kaldırıldı, jwt düzenlendi
+-Linq sorguları tek şekile getirildi(ctx.table_name.where()...)
+-Her kuruma özgü olarak benzersizlik kontrolleri eklendi(username(ilgili tüm roller), e-mail, tel, lesson code)
+-Database seedleme işlemi iyileştirildi(DatabaseConfig buna göre düzenlend)
+-Teacher lesson verileri sağlandı
+-BuildModel EF Core 5.0.0 yapısına göre düzenlendi
+-Kod okunurluğu arttırıldı
+-Performans iyileştirmeleri yapıldı
+*Frontend*
+-Backendde eklenen özelliklerin frontend karşılıkları oluşturuldu
+-Iconlar dışındaki core-ui componentleri taşındı(iconlar her yüklemede yavaşlama getiriyor, production aşamasında düzenlenecek)
+-Hata mesajları oluşturuldu(sweetalert2), api isteklerine göre düzenlendi
+-EMSeachInput oluşturuldu(tablo arama)
+-Tablo loading height'i itemlar olduğundaki uzunluğuna getirildi
+-Paginate düzenlendi
+-Sayfalara cleanup kod eklendi(useeffect cleanup)
+-EMControlledInput oluşturuldu(username,email vs benzersizlik kontrol)
+-Entity constraintlerine göre inputlar düzenlendi
+-Performans iyileştirmeleri yapıldı
